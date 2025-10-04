@@ -50,7 +50,7 @@ export const agents: Agent[] = [
       "Manejo de fuentes múltiples",
       "Base de datos espaciales completa"
     ],
-    image: "https://images.unsplash.com/photo-1576174464184-fb78fe882bfd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+    image: "src/assets/agents_img/dr.data.png",
     color: "#00D4FF",
     abilityType: "data",
     stats: {
@@ -97,7 +97,7 @@ export const agents: Agent[] = [
       "Análisis de incertidumbre orbital",
       "Mecánica celeste avanzada"
     ],
-    image: "https://images.unsplash.com/photo-1581008695823-bd71b9b3d2e6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+    image: "src/assets/agents_img/dra.orbital.png",
     color: "#FF6B2C",
     abilityType: "trajectory",
     stats: {
@@ -133,7 +133,7 @@ export const agents: Agent[] = [
   },
   {
     id: 3,
-    name: "DR. IMPACT",
+    name: "DRA. IMPACT",
     role: "IMPACT ANALYZER AGENT",
     specialty: "ANÁLISIS DE IMPACTO",
     description: "Calcula la energía del impacto y evalúa efectos sísmicos",
@@ -144,7 +144,7 @@ export const agents: Agent[] = [
       "Análisis de efectos sísmicos",
       "Evaluación de tsunamis"
     ],
-    image: "https://images.unsplash.com/photo-1655814563963-0fe0a7d6c279?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+    image: "src/assets/agents_img/dra.impact.png",
     color: "#00FF7F",
     abilityType: "impact",
     stats: {
@@ -180,7 +180,7 @@ export const agents: Agent[] = [
   },
   {
     id: 4,
-    name: "DRA. MITIGATION",
+    name: "DR. MITIGATION",
     role: "MITIGATION AGENT",
     specialty: "ESTRATEGIAS DE DEFLEXIÓN",
     description: "Evalúa estrategias de deflexión y genera recomendaciones",
@@ -191,7 +191,7 @@ export const agents: Agent[] = [
       "Optimización de misiones",
       "Recomendaciones científicas"
     ],
-    image: "https://images.unsplash.com/photo-1701187260663-dc1ab7a67f4d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+    image: "src/assets/agents_img/dr.2.png",
     color: "#B026FF",
     abilityType: "mitigation",
     stats: {
@@ -238,7 +238,7 @@ export const agents: Agent[] = [
       "Visualizaciones de métricas",
       "Representaciones 3D"
     ],
-    image: "https://images.unsplash.com/photo-1658632715383-f8c2b5cb7d61?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+    image: "src/assets/agents_img/dra.visual.png",
     color: "#FFD700",
     abilityType: "visualization",
     stats: {
@@ -285,7 +285,7 @@ export const agents: Agent[] = [
       "Cálculos de probabilidades con ML",
       "Evaluación de evolución del riesgo"
     ],
-    image: "https://images.unsplash.com/photo-1618053448748-b7251851d014?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+    image: "src/assets/agents_img/Dra.ml.png",
     color: "#00FFFF",
     abilityType: "ml",
     stats: {
@@ -332,7 +332,7 @@ export const agents: Agent[] = [
       "Adaptación por audiencia",
       "Comunicación efectiva"
     ],
-    image: "https://images.unsplash.com/photo-1623389095188-4a397c919674?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+    image: "src/assets/agents_img/dr.explainer.png",
     color: "#FF00FF",
     abilityType: "explainer",
     stats: {
