@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 // @ts-ignore
-import asteroidImage from '../../assets/images/asteroid-psyche.jpg';
+import asteroidImage from '../../assets/asteroid-psyche.png';
 
 interface Asteroid3DProps {
   asteroidType: 'metallic' | 'rocky' | 'icy';
