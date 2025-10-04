@@ -130,11 +130,15 @@ export default function AgentSelector() {
                     top: '200px'
                   }}
                 >
-                  {/* Imagen grande - avatar1.png */}
+                  {/* Imagen grande - dinámicamente basada en el agente en hover */}
                   <img
-                    src="/src/assets/images/avatar1.png"
-                    alt="Avatar"
+                    src={hoveredScientist.image}
+                    alt={hoveredScientist.name}
                     className="w-[120px] h-[150px] sm:w-[150px] sm:h-[188px] md:w-[180px] md:h-[225px] lg:w-[200px] lg:h-[250px] xl:w-[220px] xl:h-[275px] object-cover rounded-3xl border-4 border-pink-500 shadow-[0_0_40px_rgba(255,28,141,0.9)]"
+                    style={{
+                      borderColor: hoveredScientist.color,
+                      boxShadow: `0 0 40px ${hoveredScientist.color}90`
+                    }}
                   />
                 </motion.div>
               )}
