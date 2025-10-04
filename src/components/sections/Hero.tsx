@@ -1,9 +1,10 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 import { AnimatedBackground } from '../3d/AnimatedBackground';
 import NASAScientistSelector from '../features/neo/NASAScientistSelector';
 import { NEOList } from '../features/neo/NEOList';
 import AsteroidSimulatorSection from '../simulation/AsteroidSimulatorSection';
+import { ResourcesSection } from '../Resources/ResourcesSection';
 
 export const Hero: React.FC = () => {
   return (
@@ -79,6 +80,14 @@ export const Hero: React.FC = () => {
             </motion.div>
             <AsteroidSimulatorSection />
           </div>
+        </section>
+        
+        {/* Sección 4: Resources & Blog */}
+        <section 
+          id="resources-section"
+          className="relative w-full min-h-screen overflow-hidden bg-black"
+        >
+          <ResourcesSection />
         </section>
         
         
