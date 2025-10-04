@@ -22,6 +22,22 @@ export const NEOList: React.FC = () => {
   const handleNEOClick = (neo: NEO) => {
     setSelectedNEO(neo);
     setIsModalOpen(true);
+    // También alimentar los monitores inmediatamente
+    setSelectedAsteroid({
+      id: neo.neo_id || neo.id || 'unknown',
+      name: neo.name || 'Unknown',
+      diameter: (() => {
+        const avg = (neo.diameter_min_m ?? 0) && (neo.diameter_max_m ?? 0)
+          ? ((neo.diameter_min_m as number) + (neo.diameter_max_m as number)) / 2
+          : 0;
+        return avg >= 1000 ? `${(avg/1000).toFixed(1)} km` : `${avg.toFixed(0)} m`;
+      })(),
+      velocity: neo.velocity_km_s != null ? `${neo.velocity_km_s.toFixed(1)} km/s` : 'N/A',
+      is_hazardous: neo.is_potentially_hazardous ?? neo.is_hazardous ?? false,
+      approach_date: neo.close_approach_date || neo.approach_date,
+      miss_distance: neo.miss_distance_km != null ? `${(neo.miss_distance_km/1000).toFixed(1)} km` : neo.miss_distance
+    });
+    setSimulationStep('selection');
   };
 
   const handleCloseModal = () => {
@@ -111,24 +127,24 @@ export const NEOList: React.FC = () => {
           </div>
           {data && (
             <div className="mt-2 text-xs text-green-400/80 bg-green-400/10 px-3 py-1 rounded-full inline-block">
-              ✅ Datos en tiempo real del backend
+              Real time data
             </div>
           )}
           </div>
         </div>
 
       {/* Carrusel de asteroides - Sin restricción de ancho */}
-      <Carousel
-        items={data?.neos || []}
-        renderItem={(neo, index, isActive) => (
-            <NEOCard 
-            key={neo.neo_id} 
-              neo={neo} 
-              onClick={() => handleNEOClick(neo)}
-              onSimulate={handleSimulateImpact}
-            />
+      <Carousel<NEO>
+        items={data?.neos ?? ([] as NEO[])}
+        renderItem={(neo, index, _isActive) => (
+          <NEOCard
+            key={neo.neo_id}
+            neo={neo}
+            onClick={() => handleNEOClick(neo)}
+            onSimulate={handleSimulateImpact}
+          />
         )}
-        keyExtractor={(neo) => neo.neo_id}
+        keyExtractor={(neo: NEO) => neo.neo_id}
         autoPlay={false}
         showIndicators={true}
         showNavigation={true}

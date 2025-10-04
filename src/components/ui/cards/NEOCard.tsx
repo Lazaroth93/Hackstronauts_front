@@ -84,28 +84,28 @@ export const NEOCard: React.FC<NEOCardProps> = ({ neo, onClick, onSimulate }) =>
                   <div className="data-icon">📏</div>
                   <div className="data-content">
                     <label>DIÁMETRO</label>
-                    <span>{averageDiameter.toFixed(1)} km</span>
+                    <span>{averageDiameter >= 1000 ? `${(averageDiameter/1000).toFixed(1)} km` : `${averageDiameter.toFixed(0)} m`}</span>
                   </div>
                 </div>
                 <div className="data-card">
                   <div className="data-icon">🌍</div>
                   <div className="data-content">
                     <label>DISTANCIA</label>
-                    <span>{neo.miss_distance_km ? `${(neo.miss_distance_km / 1000).toFixed(2)} km` : 'N/A'}</span>
+                    <span>{neo.miss_distance_km ? `${(neo.miss_distance_km / 1000000).toFixed(2)}M km` : 'N/A'}</span>
                   </div>
                 </div>
                 <div className="data-card">
                   <div className="data-icon">⚡</div>
                   <div className="data-content">
                     <label>VELOCIDAD</label>
-                    <span>{neo.velocity_km_s ? `${neo.velocity_km_s.toFixed(2)} km/s` : 'N/A'}</span>
+                    <span>{neo.velocity_km_s ? `${neo.velocity_km_s.toFixed(1)} km/s` : 'N/A'}</span>
                   </div>
                 </div>
                 <div className="data-card">
                   <div className="data-icon">⚛️</div>
                   <div className="data-content">
-                    <label>MASA</label>
-                    <span>{(averageDiameter * 1000).toFixed(0)} kg</span>
+                    <label>RIESGO</label>
+                    <span>{neo.risk_category || 'Bajo'}</span>
                   </div>
                 </div>
               </div>
@@ -245,7 +245,7 @@ export const NEOCard: React.FC<NEOCardProps> = ({ neo, onClick, onSimulate }) =>
                       <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', flex: 1, justifyContent: 'space-around' }}>
                         <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '13px', padding: '4px 0' }}>
                           <span style={{ color: '#d1d5db' }}>Diámetro promedio:</span>
-                          <span style={{ color: 'white', fontWeight: '600' }}>{averageDiameter.toFixed(0)}m</span>
+                          <span style={{ color: 'white', fontWeight: '600' }}>{averageDiameter >= 1000 ? `${(averageDiameter/1000).toFixed(1)} km` : `${averageDiameter.toFixed(0)} m`}</span>
                         </div>
                         <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '13px', padding: '4px 0' }}>
                           <span style={{ color: '#d1d5db' }}>Rango de diámetro:</span>
@@ -253,7 +253,7 @@ export const NEOCard: React.FC<NEOCardProps> = ({ neo, onClick, onSimulate }) =>
                         </div>
                         <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '13px', padding: '4px 0' }}>
                           <span style={{ color: '#d1d5db' }}>Composición estimada:</span>
-                          <span style={{ color: 'white', fontWeight: '600' }}>{getComposition()}</span>
+                          <span style={{ color: 'white', fontWeight: '600' }}>{neo.composition_estimate || getComposition()}</span>
                         </div>
         </div>
       </div>
@@ -285,15 +285,15 @@ export const NEOCard: React.FC<NEOCardProps> = ({ neo, onClick, onSimulate }) =>
                         </div>
                         <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '13px', padding: '4px 0' }}>
                           <span style={{ color: '#d1d5db' }}>Velocidad relativa:</span>
-                          <span style={{ color: 'white', fontWeight: '600' }}>{neo.velocity_km_s ? `${neo.velocity_km_s.toFixed(2)} km/s` : 'N/A'}</span>
+                          <span style={{ color: 'white', fontWeight: '600' }}>{neo.velocity_km_s ? `${neo.velocity_km_s.toFixed(1)} km/s` : 'N/A'}</span>
                         </div>
                         <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '13px', padding: '4px 0' }}>
-                          <span style={{ color: '#d1d5db' }}>Distancia de aproximación:</span>
-                          <span style={{ color: 'white', fontWeight: '600' }}>{neo.miss_distance_km ? `${(neo.miss_distance_km / 1000).toFixed(2)} km` : 'N/A'}</span>
+                          <span style={{ color: '#d1d5db' }}>Distancia mínima:</span>
+                          <span style={{ color: 'white', fontWeight: '600' }}>{neo.miss_distance_km ? `${(neo.miss_distance_km / 1000000).toFixed(2)}M km` : 'N/A'}</span>
                         </div>
                         <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '13px', padding: '4px 0' }}>
-                          <span style={{ color: '#d1d5db' }}>Probabilidad de impacto:</span>
-                          <span style={{ color: 'white', fontWeight: '600' }}>{neo.is_potentially_hazardous ? '0.010000%' : '0%'}</span>
+                          <span style={{ color: '#d1d5db' }}>Energía de impacto:</span>
+                          <span style={{ color: 'white', fontWeight: '600' }}>{neo.impact_energy_mt ? `${neo.impact_energy_mt.toFixed(1)} MT` : 'N/A'}</span>
                         </div>
                       </div>
                     </div>

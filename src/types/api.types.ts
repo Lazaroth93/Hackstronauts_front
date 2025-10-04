@@ -24,6 +24,18 @@ export interface NEO {
   image_url?: string;            // URL de la imagen
   next_approach?: string;        // Próximo acercamiento
   impact_probability?: number;   // Probabilidad de impacto
+
+  // Campos legacy para compatibilidad con código existente
+  id?: string;
+  diameter?: string;
+  velocity?: string;
+  is_hazardous?: boolean;
+  approach_date?: string;
+  miss_distance?: string;
+  density?: string;
+  absolute_magnitude_h?: number;
+  orbital_data?: any;
+  close_approach_data?: any;
 }
 
 // Respuesta cuando pedimos una lista de NEOs
