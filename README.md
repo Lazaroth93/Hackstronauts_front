@@ -1,8 +1,8 @@
-# 🚀 Hackstronauts - Asteroid Impact Simulator
+ # 🚀 The Saviors by Hackstronauts Minds - Asteroid Impact Simulator
 
 ## 🌟 Description
 
-**Hackstronauts** is an interactive web application that simulates real-time asteroid impacts. Users can select locations on a 3D Earth globe, visualize impacts on a 2D map, and experience realistic visual effects including explosions, shockwaves, and craters.
+**The Saviors** is an interactive web application that simulates real-time asteroid impacts. Users can select locations on a 3D Earth globe, visualize impacts on a 2D map, and experience realistic visual effects including explosions, shockwaves, and craters.
 
 ## ✨ Key Features
 
@@ -125,35 +125,6 @@ src/
 - **Particles** (0.0s) - Trail effects
 - **Crater** (0.8s) - Permanent crater formation
 
-## 🎨 Customization
-
-### **Asteroid Materials**
-```typescript
-const materialConfig = {
-  iron: { 
-    color: '#8B4513', 
-    trailColor: '#FF6347', 
-    glowColor: '#FF4500', 
-    icon: '🦾' 
-  },
-  // ... more materials
-};
-```
-
-### **Visual Effects**
-- Modify gradients in `AsteroidLauncher.tsx`
-- Adjust animation timings
-- Customize colors and effect sizes
-
-## 🧪 Testing
-
-```bash
-# Run tests (if configured)
-npm test
-
-# Run tests in watch mode
-npm run test:watch
-```
 
 ## 📦 Production Build
 
@@ -173,39 +144,13 @@ npm run preview
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## 📝 Roadmap
-
-- [ ] **Realistic sounds** - Audio effects for impacts
-- [ ] **Multiple craters** - Persistent crater system
-- [ ] **Impact statistics** - Damage and range data
-- [ ] **Multiplayer mode** - Simultaneous impacts
-- [ ] **Augmented reality** - AR impact visualization
-- [ ] **Video export** - Simulation recording
-
-## 🐛 Known Issues
-
-- Animations may be intensive on mobile devices
-- Some older browsers may have WebGL issues
-- Blur effects may affect performance on limited hardware
-
-## 📄 License
-
-This project is licensed under the MIT License. See `LICENSE` for more details.
 
 ## 👥 Authors
 
-- **Your Name** - *Initial development* - [GitHub](https://github.com/your-username)
+- **Luis Carlos Bravo** - *Frontend - Backend developer* - [GitHub](https://github.com/LuisCar09)
+- **Barbara Sanchez Urbano** - *Frontend - Backend developer* - [GitHub](https://github.com/Barbarasanchez11)
+- **Andres Lazaro** - *Frontend developer - Backend developer* - [GitHub](https://github.com/Lazaroth93)
+- **Anthony Caceda** - *Frontend developer - Backend developer* - [GitHub](https://github.com/Anthonycpcode)
 
-## 🙏 Acknowledgments
-
-- **Three.js** - For the incredible 3D engine
-- **Leaflet** - For interactive maps
-- **Framer Motion** - For fluid animations
-- **React** - For the framework that makes it possible
-
----
-
-<div align="center">
-  <p>Made with ❤️ by the Hackstronauts team</p>
-  <p>⭐ If you like the project, give it a star!</p>
-</div>
+- Made with ❤️ by the Hackstronauts Minds team
+- ⭐ If you like the project, give it a star!   
