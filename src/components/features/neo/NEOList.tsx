@@ -147,6 +147,21 @@ export const NEOList: React.FC = () => {
         showNavigation={true}
       />
 
+      {/* Additional information */}
+      <div className="mt-12 text-center px-6">
+        <div className="max-w-6xl mx-auto">
+          <div className="inline-flex items-center space-x-6 text-sm text-white/40">
+            <div className="flex items-center space-x-2">
+              <div className="w-3 h-3 rounded-full bg-green-500"></div>
+              <span>Safe</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <div className="w-3 h-3 rounded-full bg-red-500"></div>
+              <span>Hazardous</span>
+            </div>
+          </div>
+        </div>
+      </div>
 
       {/* Details modal */}
       {selectedNEO && (

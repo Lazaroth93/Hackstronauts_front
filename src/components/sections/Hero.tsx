@@ -16,7 +16,7 @@ export const Hero: React.FC = () => {
       {/* Contenido principal */}
       <div className="relative z-10">
         {/* Sección 1: Selección de Científicos NASA */}
-        <section id="hero" className="relative w-full min-h-screen bg-black py-8 lg:py-20">
+        <section className="relative w-full min-h-screen bg-black py-8 lg:py-20 ">
           <div>
             <motion.div 
               className="absolute top-16 left-0 right-0 text-center z-20"
@@ -24,27 +24,27 @@ export const Hero: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h1 className="text-xl md:text-xl lg:text-5xl font-black  lg:mb-6 tracking-wider" style={{ fontFamily: 'Orbitron, monospace' , marginTop: '20px' }}>
+              <h1 className="text-xl md:text-xl lg:text-5xl font-black lg:mb-6 tracking-wider" style={{ fontFamily: 'Orbitron, monospace', marginTop: '20px' }}>
                 <span className="text-emerald-400 drop-shadow-[0_0_30px_rgba(52,211,153,0.8)]" style={{ textShadow: '0 0 20px rgba(52,211,153,0.8), 0 0 40px rgba(52,211,153,0.6)' }}>
-                  Our Scientists
+                  OUR SCIENTISTS
                 </span>
                 <br />
                 <span className="text-orange-400 drop-shadow-[0_0_30px_rgba(239,68,68,0.8)]" style={{ textShadow: '0 0 20px rgba(249,115,22,0.8), 0 0 40px rgba(249,115,22,0.6)' }}>
-                  Agents
+                  AGENTS
                 </span>
               </h1>
-              <div className="flex justify-center items-center gap-6 ">
+              <div className="flex justify-center items-center gap-6">
                 <div className="h-0.5 bg-gradient-to-r from-transparent via-emerald-400 to-transparent w-20 shadow-[0_0_10px_rgba(52,211,153,0.6)]"></div>
                 <div className="w-3 h-3 rounded-full bg-gradient-to-r from-orange-400 to-red-500 animate-pulse shadow-[0_0_15px_rgba(239,68,68,0.9)]"></div>
                 <div className="h-0.5 bg-gradient-to-r from-transparent via-emerald-400 to-transparent w-20 shadow-[0_0_10px_rgba(52,211,153,0.6)]"></div>
               </div>
-              <p className="text-lg md:text-xl font-[20px] max-w-3xl mx-auto mb-6 tracking-wide" style={{ fontFamily: 'Orbitron, monospace' }}>
-                <span className="text-gray-300 font-[14px] opacity-50">
-                   Elite AI-POWERED Research Team
+              <p className="text-lg md:text-xl max-w-3xl mx-auto mb-6 tracking-wide" style={{ fontFamily: 'Orbitron, monospace' }}>
+                <span className="text-gray-300 opacity-50">
+                  Elite AI-POWERED Research Team
                 </span>
                 <br />
-                <span className="text-gray-300 font-[14px] opacity-50">
-                   Asteroid Detection & Planetary Defense
+                <span className="text-gray-300 opacity-50">
+                  Asteroid Detection & Planetary Defense
                 </span>
               </p>
             </motion.div>
@@ -61,8 +61,19 @@ export const Hero: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-             
-           
+              <h2 className="text-3xl md:text-4xl lg:text-6xl font-bold text-white mb-4 lg:mb-6">
+                Near Earth Objects
+              </h2>
+              <p className="text-lg md:text-xl text-white/70 max-w-3xl mx-auto mb-6">
+              Real-time monitoring of Near-Earth asteroids powered by our AI system
+              </p>
+              <div className="flex flex-wrap justify-center gap-4 text-sm">
+                <div className="flex items-center gap-2 bg-green-500/20 px-4 py-2 rounded-full border border-green-500/30">
+                  <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
+                  <span className="text-green-400 font-semibold">Real time data</span>
+                </div>
+                
+              </div>
             </motion.div>
             <NEOList />
           </div>
