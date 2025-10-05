@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { PlanetIntro, Hero } from './components/sections';
+import { Navbar } from './components/navigation/NavbarClean';
 import { SimulationProvider } from './contexts/SimulationContext';
 import './styles/monitor-styles.css';
 
@@ -45,6 +46,9 @@ export default function App() {
           <AppContent />
         </SimulationProvider>
       </motion.div>
+
+      {/* Navbar - aparece solo después de la intro */}
+      {showMainContent && <Navbar />}
 
       {/* Intro con planeta - fade out cuando se completa */}
       <motion.div

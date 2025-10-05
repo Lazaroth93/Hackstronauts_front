@@ -5,6 +5,7 @@ import NASAScientistSelector from '../features/neo/NASAScientistSelector';
 import { NEOList } from '../features/neo/NEOList';
 import AsteroidSimulatorSection from '../simulation/AsteroidSimulatorSection';
 import { ResourcesSection } from '../Resources/ResourcesSection';
+import { MonitorAgentes } from '../monitoring/MonitorAgentes';
 
 export const Hero: React.FC = () => {
   return (
@@ -15,7 +16,7 @@ export const Hero: React.FC = () => {
       {/* Contenido principal */}
       <div className="relative z-10">
         {/* Sección 1: Selección de Científicos NASA */}
-        <section className="relative w-full min-h-screen bg-black py-8 lg:py-20 ">
+        <section id="hero" className="relative w-full min-h-screen bg-black py-8 lg:py-20">
           <div>
             <motion.div 
               className="absolute top-16 left-0 right-0 text-center z-20"
@@ -52,7 +53,7 @@ export const Hero: React.FC = () => {
         </section>
         
         {/* Sección 2: Visualización de Meteoritos/Asteroides */}
-        <section className="relative w-full min-h-screen overflow-hidden bg-black py-8 lg:py-20">
+        <section id="neo-list" className="relative w-full min-h-screen overflow-hidden bg-black py-8 lg:py-20">
           <div>
             <motion.div 
               className="text-center mb-8 lg:mb-16"
@@ -69,7 +70,7 @@ export const Hero: React.FC = () => {
         
         {/* Sección 3: Simulación 3D */}
         <section 
-          id="simulator-section"
+          id="simulation"
           className="relative w-full min-h-screen overflow-hidden bg-black py-8 lg:py-20"
         >
           <div>
@@ -90,9 +91,34 @@ export const Hero: React.FC = () => {
           </div>
         </section>
         
-        {/* Sección 4: Resources & Blog */}
+        {/* Sección 4: Monitoreo de Agentes */}
         <section 
-          id="resources-section"
+          id="monitor"
+          className="relative w-full min-h-screen overflow-hidden bg-black py-8 lg:py-20"
+        >
+          <div>
+            <motion.div 
+              className="text-center mb-8 lg:mb-16"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-3xl md:text-4xl lg:text-6xl font-bold text-white mb-4 lg:mb-6">
+                <span className="bg-gradient-to-r from-green-400 via-cyan-500 to-blue-600 bg-clip-text text-transparent">
+                  Monitoreo de Agentes IA
+                </span>
+              </h2>
+              <p className="text-lg md:text-xl text-white/70 max-w-3xl mx-auto">
+                Observa el trabajo de nuestros agentes especializados en tiempo real
+              </p>
+            </motion.div>
+            <MonitorAgentes />
+          </div>
+        </section>
+        
+        {/* Sección 5: Resources & Blog */}
+        <section 
+          id="resources"
           className="relative w-full min-h-screen overflow-hidden bg-black"
         >
           <ResourcesSection />
