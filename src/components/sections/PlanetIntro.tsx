@@ -192,7 +192,7 @@ export function PlanetIntro({ onComplete }: PlanetIntroProps) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.5, delay: 2 }}
           >
-            Explorando el cosmos con inteligencia artificial
+            Exploring the Cosmos with Artificial Intelligence
           </motion.p>
         </div>
       </div>
