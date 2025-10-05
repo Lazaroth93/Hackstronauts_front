@@ -47,7 +47,7 @@ const Gauge: React.FC<GaugeProps> = ({ label, value, unit, max, color }) => {
           </div>
         </div>
       </div>
-      <div className="text-white text-xs font-mono">{label}</div>
+      <div className="text-white text-xs" style={{ fontFamily: 'Orbitron, monospace' }}>{label}</div>
     </div>
   );
 };
@@ -89,7 +89,7 @@ export const ThreatAssessmentPanel: React.FC = () => {
       </div>
       
       <div className="mt-4 text-center">
-        <div className="text-green-400 text-sm font-mono">
+        <div className="text-green-400 text-sm" style={{ fontFamily: 'Orbitron, monospace' }}>
           STATUS: {energy > 50 ? 'HIGH THREAT' : energy > 20 ? 'MEDIUM THREAT' : 'LOW THREAT'}
         </div>
       </div>

@@ -39,7 +39,7 @@ interface LiveMetrics {
 }
 
 export const useLiveMetrics = () => {
-  const { selectedAsteroid, impactCoordinates, isSimulationActive } = useSimulation();
+  const { selectedAsteroid, impactCoordinates } = useSimulation();
   const [metrics, setMetrics] = useState<LiveMetrics>({
     trackingObjects: 0,
     averageAltitude: 0,
@@ -63,12 +63,18 @@ export const useLiveMetrics = () => {
   });
 
   const updateMetrics = useCallback(() => {
-    if (!selectedAsteroid) return;
-
-    // Calcular métricas basadas en el asteroide seleccionado
-    const diameter = parseFloat(selectedAsteroid.diameter?.replace(/[^\d.]/g, '') || '0');
-    const velocity = parseFloat(selectedAsteroid.velocity?.replace(/[^\d.]/g, '') || '0');
-    const isHazardous = selectedAsteroid.is_hazardous;
+    // Calcular métricas basadas en el asteroide seleccionado o valores por defecto
+    const diameter = selectedAsteroid ? 
+      parseFloat(selectedAsteroid.diameter?.replace(/[^\d.]/g, '') || '0') : 
+      Math.random() * 1000 + 100; // 100-1100m por defecto
+    
+    const velocity = selectedAsteroid ? 
+      parseFloat(selectedAsteroid.velocity?.replace(/[^\d.]/g, '') || '0') : 
+      Math.random() * 20 + 5; // 5-25 km/s por defecto
+    
+    const isHazardous = selectedAsteroid ? 
+      selectedAsteroid.is_hazardous : 
+      Math.random() > 0.7; // 30% probabilidad de ser peligroso
 
     // Métricas orbitales
     const trackingObjects = Math.floor(Math.random() * 50) + 20; // 20-70 objetos
@@ -133,21 +139,17 @@ export const useLiveMetrics = () => {
     });
   }, [selectedAsteroid, impactCoordinates]);
 
-  // Actualizar métricas cada 2 segundos cuando la simulación está activa
+  // Actualizar métricas cada 2 segundos siempre (para mostrar datos en tiempo real)
   useEffect(() => {
-    if (!isSimulationActive) return;
-
     updateMetrics();
     const interval = setInterval(updateMetrics, 2000);
 
     return () => clearInterval(interval);
-  }, [isSimulationActive, updateMetrics]);
+  }, [updateMetrics]);
 
   // Actualizar métricas cuando cambia el asteroide
   useEffect(() => {
-    if (selectedAsteroid) {
-      updateMetrics();
-    }
+    updateMetrics();
   }, [selectedAsteroid, updateMetrics]);
 
   return metrics;

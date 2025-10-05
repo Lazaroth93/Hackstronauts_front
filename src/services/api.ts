@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // Configuración básica de axios para conectar con el backend
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000';
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://hackstronauts-back-2.onrender.com';
 
 export const apiClient = axios.create({
   baseURL: API_BASE_URL,

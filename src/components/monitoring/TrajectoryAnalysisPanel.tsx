@@ -60,18 +60,18 @@ export const TrajectoryAnalysisPanel: React.FC = () => {
         </svg>
         
         {/* Labels */}
-        <div className="absolute bottom-2 left-2 text-gray-400 text-xs font-mono">
+        <div className="absolute bottom-2 left-2 text-gray-400 text-xs" style={{ fontFamily: 'Orbitron, monospace' }}>
           TIME: 0s
         </div>
-        <div className="absolute bottom-2 right-2 text-gray-400 text-xs font-mono">
+        <div className="absolute bottom-2 right-2 text-gray-400 text-xs" style={{ fontFamily: 'Orbitron, monospace' }}>
           TIME: {trajectoryPoints.length * 0.5}s
         </div>
-        <div className="absolute top-2 left-2 text-gray-400 text-xs font-mono">
+        <div className="absolute top-2 left-2 text-gray-400 text-xs" style={{ fontFamily: 'Orbitron, monospace' }}>
           ALTITUDE
         </div>
       </div>
       
-      <div className="mt-4 flex justify-between text-xs font-mono">
+      <div className="mt-4 flex justify-between text-xs" style={{ fontFamily: 'Orbitron, monospace' }}>
         <div className="text-green-400">
           PROBABILITY: {(metrics.collisionProbability * 100).toFixed(2)}%
         </div>

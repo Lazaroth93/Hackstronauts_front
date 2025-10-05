@@ -123,7 +123,7 @@ const VintageMonitor: React.FC<MonitorProps> = ({ agentName, status, size = 'med
           border: '1px solid #4b5563'
         }}
       >
-        <div style={{ color: 'white', fontFamily: 'monospace', fontSize: '0.875rem', fontWeight: 'bold' }}>
+        <div style={{ color: 'white', fontFamily: 'Orbitron, monospace', fontSize: '0.875rem', fontWeight: 'bold' }}>
           {agentName}
         </div>
         <div 
@@ -343,7 +343,7 @@ const AgentDropdown: React.FC<{ agent: AgentDetail; onClose: () => void }> = ({ 
               color: '#4ade80', 
               fontSize: '1.25rem', 
               fontWeight: 'bold', 
-              fontFamily: 'monospace',
+              fontFamily: 'Orbitron, monospace',
               textShadow: '0 0 10px rgba(74, 222, 128, 0.5)',
               margin: 0
             }}>
@@ -353,7 +353,7 @@ const AgentDropdown: React.FC<{ agent: AgentDetail; onClose: () => void }> = ({ 
               color: '#d1d5db', 
               fontSize: '0.875rem', 
               margin: '0.25rem 0 0 0',
-              fontFamily: 'monospace'
+              fontFamily: 'Orbitron, monospace'
             }}>
               {agent.description}
             </p>
@@ -367,7 +367,7 @@ const AgentDropdown: React.FC<{ agent: AgentDetail; onClose: () => void }> = ({ 
               color: '#fca5a5',
               padding: '0.5rem',
               cursor: 'pointer',
-              fontFamily: 'monospace',
+              fontFamily: 'Orbitron, monospace',
               fontSize: '1rem',
               transition: 'all 0.2s ease'
             }}
@@ -387,10 +387,10 @@ const AgentDropdown: React.FC<{ agent: AgentDetail; onClose: () => void }> = ({ 
         {/* Performance bar */}
         <div className="mb-4">
           <div className="flex items-center justify-between mb-2">
-            <span style={{ color: '#9ca3af', fontSize: '0.75rem', fontFamily: 'monospace' }}>
+            <span style={{ color: '#9ca3af', fontSize: '0.75rem', fontFamily: 'Orbitron, monospace' }}>
               PERFORMANCE
             </span>
-            <span style={{ color: '#4ade80', fontSize: '0.875rem', fontFamily: 'monospace', fontWeight: 'bold' }}>
+            <span style={{ color: '#4ade80', fontSize: '0.875rem', fontFamily: 'Orbitron, monospace', fontWeight: 'bold' }}>
               {agent.performance}%
             </span>
           </div>
@@ -420,7 +420,7 @@ const AgentDropdown: React.FC<{ agent: AgentDetail; onClose: () => void }> = ({ 
             color: '#f59e0b', 
             fontSize: '0.75rem', 
             fontWeight: 'bold', 
-            fontFamily: 'monospace',
+            fontFamily: 'Orbitron, monospace',
             margin: '0 0 0.5rem 0',
             textTransform: 'uppercase',
             letterSpacing: '0.1em'
@@ -430,7 +430,7 @@ const AgentDropdown: React.FC<{ agent: AgentDetail; onClose: () => void }> = ({ 
           <p style={{ 
             color: '#e5e7eb', 
             fontSize: '0.875rem', 
-            fontFamily: 'monospace',
+            fontFamily: 'Orbitron, monospace',
             margin: 0,
             lineHeight: '1.4'
           }}>
@@ -444,7 +444,7 @@ const AgentDropdown: React.FC<{ agent: AgentDetail; onClose: () => void }> = ({ 
             color: '#8b5cf6', 
             fontSize: '0.75rem', 
             fontWeight: 'bold', 
-            fontFamily: 'monospace',
+            fontFamily: 'Orbitron, monospace',
             margin: '0 0 0.75rem 0',
             textTransform: 'uppercase',
             letterSpacing: '0.1em'
@@ -465,7 +465,7 @@ const AgentDropdown: React.FC<{ agent: AgentDetail; onClose: () => void }> = ({ 
                   padding: '0.5rem',
                   fontSize: '0.75rem',
                   color: '#c4b5fd',
-                  fontFamily: 'monospace',
+                  fontFamily: 'Orbitron, monospace',
                   textAlign: 'center'
                 }}
               >
@@ -540,10 +540,10 @@ export function MonitorAgentes() {
         <div className="w-full max-w-7xl mx-auto">
           {/* Section Header */}
           <div className="mb-6 text-center">
-            <h2 className="text-2xl font-bold text-white mb-2 font-mono">
+            <h2 className="text-5xl font-bold text-white mb-2" style={{ fontSize: '48px', fontFamily: 'Orbitron, monospace' }}>
               AI AGENTS WORKSTATION
             </h2>
-            <p className="text-gray-400 text-sm">
+            <p className="text-gray-400 text-sm text-[28px]" style={{ fontSize: '24px', fontFamily: 'Orbitron, monospace' }}>
               Real-time agent processing and analysis
             </p>
           </div>
@@ -562,7 +562,7 @@ export function MonitorAgentes() {
               >
                 <div style={{ 
                   color: '#4ade80', 
-                  fontFamily: 'monospace', 
+                  fontFamily: 'Orbitron, monospace', 
                   fontSize: 'clamp(0.5rem, 1.2vw, 0.75rem)', 
                   lineHeight: '1.2' 
                 }}>
@@ -586,7 +586,7 @@ export function MonitorAgentes() {
               >
                 <div style={{ 
                   color: '#4ade80', 
-                  fontFamily: 'monospace', 
+                  fontFamily: 'Orbitron, monospace', 
                   fontSize: 'clamp(0.5rem, 1.2vw, 0.75rem)', 
                   lineHeight: '1.2' 
                 }}>
@@ -609,7 +609,7 @@ export function MonitorAgentes() {
               >
                 <div style={{ 
                   color: '#4ade80', 
-                  fontFamily: 'monospace', 
+                  fontFamily: 'Orbitron, monospace', 
                   fontSize: 'clamp(0.5rem, 1.2vw, 0.75rem)', 
                   lineHeight: '1.2' 
                 }}>
@@ -632,7 +632,7 @@ export function MonitorAgentes() {
               >
                 <div style={{ 
                   color: '#4ade80', 
-                  fontFamily: 'monospace', 
+                  fontFamily: 'Orbitron, monospace', 
                   fontSize: 'clamp(0.5rem, 1.2vw, 0.75rem)', 
                   lineHeight: '1.2' 
                 }}>
@@ -655,7 +655,7 @@ export function MonitorAgentes() {
               >
                 <div style={{ 
                   color: '#4ade80', 
-                  fontFamily: 'monospace', 
+                  fontFamily: 'Orbitron, monospace', 
                   fontSize: 'clamp(0.5rem, 1.2vw, 0.75rem)', 
                   lineHeight: '1.2' 
                 }}>
@@ -678,7 +678,7 @@ export function MonitorAgentes() {
               >
                 <div style={{ 
                   color: '#4ade80', 
-                  fontFamily: 'monospace', 
+                  fontFamily: 'Orbitron, monospace', 
                   fontSize: 'clamp(0.5rem, 1.2vw, 0.75rem)', 
                   lineHeight: '1.2' 
                 }}>
@@ -702,7 +702,7 @@ export function MonitorAgentes() {
               >
                 <div style={{ 
                   color: '#4ade80', 
-                  fontFamily: 'monospace', 
+                  fontFamily: 'Orbitron, monospace', 
                   fontSize: 'clamp(0.5rem, 1.2vw, 0.75rem)', 
                   lineHeight: '1.2' 
                 }}>

@@ -116,12 +116,10 @@ export const Hero: React.FC = () => {
             >
               <h2 className="text-3xl md:text-4xl lg:text-6xl font-bold text-white mb-4 lg:mb-6">
                 <span className="bg-gradient-to-r from-green-400 via-cyan-500 to-blue-600 bg-clip-text text-transparent">
-                  Monitoreo de Agentes IA
+                AI Agents Monitoring
                 </span>
               </h2>
-              <p className="text-lg md:text-xl text-white/70 max-w-3xl mx-auto">
-                Observa el trabajo de nuestros agentes especializados en tiempo real
-              </p>
+
             </motion.div>
             <MonitorAgentes />
           </div>

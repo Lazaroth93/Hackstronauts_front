@@ -30,7 +30,7 @@ export const NEODetailModal: React.FC<NEODetailModalProps> = ({ neo, isOpen, onC
         } catch (error) {
           console.error('Error generating image:', error);
           // Fallback a placeholder simple
-          setImageUrl(`https://via.placeholder.com/400x300/1a1a1a/ffffff?text=${neo.name.replace(/[^a-zA-Z0-9\s]/g, '').substring(0, 20)}`);
+          setImageUrl(`https://via.placeholder.com/400x300/1a1a1a/ffffff?text=${neo.name.replace(/[^a-zA-Z0-9\\s]/g, '').substring(0, 20)}`);
         }
       };
 
@@ -98,70 +98,70 @@ export const NEODetailModal: React.FC<NEODetailModalProps> = ({ neo, isOpen, onC
               <p className="mt-4 text-white/60 text-sm sm:text-base">Obteniendo datos detallados...</p>
             </div>
           ) : (
-              <div className="space-y-4 sm:space-y-6">
-                {/* Características físicas */}
-                <div>
-                  <h3 className="text-base sm:text-lg font-semibold text-white mb-3">Características Físicas</h3>
-                  <div className="space-y-3">
-                    <div className="flex flex-col sm:flex-row sm:justify-between gap-1 sm:gap-4">
-                      <span className="text-white/60 text-sm sm:text-base">Diámetro promedio:</span>
-                      <span className="text-white font-mono text-sm sm:text-base">{averageDiameter.toFixed(0)}m</span>
-                    </div>
-                    <div className="flex flex-col sm:flex-row sm:justify-between gap-1 sm:gap-4">
-                      <span className="text-white/60 text-sm sm:text-base">Rango de diámetro:</span>
-                      <span className="text-white font-mono text-sm sm:text-base">
-                        {data.diameter_min_m.toFixed(0)}m - {data.diameter_max_m.toFixed(0)}m
-                      </span>
-                    </div>
-                    <div className="flex flex-col sm:flex-row sm:justify-between gap-1 sm:gap-4">
-                      <span className="text-white/60 text-sm sm:text-base">Composición estimada:</span>
-                      <span className="text-white text-sm sm:text-base break-words">{data.composition_estimate || 'No disponible'}</span>
-                    </div>
+            <div className="space-y-4 sm:space-y-6">
+              {/* Características físicas */}
+              <div>
+                <h3 className="text-base sm:text-lg font-semibold text-white mb-3">Características Físicas</h3>
+                <div className="space-y-3">
+                  <div className="flex flex-col sm:flex-row sm:justify-between gap-1 sm:gap-4">
+                    <span className="text-white/60 text-sm sm:text-base">Diámetro promedio:</span>
+                    <span className="text-white text-sm sm:text-base" style={{ fontFamily: 'Orbitron, monospace' }}>{averageDiameter.toFixed(0)}m</span>
+                  </div>
+                  <div className="flex flex-col sm:flex-row sm:justify-between gap-1 sm:gap-4">
+                    <span className="text-white/60 text-sm sm:text-base">Rango de diámetro:</span>
+                    <span className="text-white text-sm sm:text-base" style={{ fontFamily: 'Orbitron, monospace' }}>
+                      {data.diameter_min_m?.toFixed(0)}m - {data.diameter_max_m?.toFixed(0)}m
+                    </span>
+                  </div>
+                  <div className="flex flex-col sm:flex-row sm:justify-between gap-1 sm:gap-4">
+                    <span className="text-white/60 text-sm sm:text-base">Composición estimada:</span>
+                    <span className="text-white text-sm sm:text-base break-words">{data.composition_estimate || 'No disponible'}</span>
                   </div>
                 </div>
+              </div>
 
-                {/* Datos orbitales */}
-                <div>
-                  <h3 className="text-base sm:text-lg font-semibold text-white mb-3">Datos Orbitales</h3>
-                  <div className="space-y-3">
-                    {data.close_approach_date && (
+              {/* Datos orbitales */}
+              <div>
+                <h3 className="text-base sm:text-lg font-semibold text-white mb-3">Datos Orbitales</h3>
+                <div className="space-y-3">
+                  {data.close_approach_date && (
                     <div className="flex flex-col sm:flex-row sm:justify-between gap-1 sm:gap-4">
                       <span className="text-white/60 text-sm sm:text-base">Último acercamiento:</span>
-                        <span className="text-white text-sm sm:text-base">{data.close_approach_date}</span>
+                      <span className="text-white text-sm sm:text-base">{data.close_approach_date}</span>
                     </div>
-                    )}
-                  </div>
+                  )}
                 </div>
+              </div>
 
-                {/* Datos de aproximación */}
-                <div>
-                  <h3 className="text-base sm:text-lg font-semibold text-white mb-3">Última Aproximación</h3>
-                  <div className="space-y-3">
-                    {data.velocity_km_s && (
+              {/* Datos de aproximación */}
+              <div>
+                <h3 className="text-base sm:text-lg font-semibold text-white mb-3">Última Aproximación</h3>
+                <div className="space-y-3">
+                  {data.velocity_km_s && (
                     <div className="flex flex-col sm:flex-row sm:justify-between gap-1 sm:gap-4">
                       <span className="text-white/60 text-sm sm:text-base">Velocidad relativa:</span>
-                      <span className="text-white font-mono text-sm sm:text-base">
-                          {data.velocity_km_s.toFixed(2)} km/s
+                      <span className="text-white text-sm sm:text-base" style={{ fontFamily: 'Orbitron, monospace' }}>
+                        {data.velocity_km_s.toFixed(2)} km/s
                       </span>
                     </div>
-                    )}
-                    {data.miss_distance_km && (
+                  )}
+                  {data.miss_distance_km && (
                     <div className="flex flex-col sm:flex-row sm:justify-between gap-1 sm:gap-4">
                       <span className="text-white/60 text-sm sm:text-base">Distancia de aproximación:</span>
-                      <span className="text-white font-mono text-sm sm:text-base">
-                          {(data.miss_distance_km / 1000).toFixed(2)} km
+                      <span className="text-white text-sm sm:text-base" style={{ fontFamily: 'Orbitron, monospace' }}>
+                        {(data.miss_distance_km / 1000).toFixed(2)} km
                       </span>
                     </div>
-                    )}
-                    <div className="flex flex-col sm:flex-row sm:justify-between gap-1 sm:gap-4">
-                      <span className="text-white/60 text-sm sm:text-base">Probabilidad de impacto:</span>
-                      <span className={`font-mono text-sm sm:text-base ${
-                        data.impact_probability && data.impact_probability > 0.001 
-                          ? 'text-red-400' 
-                          : 'text-green-400'
-                      }`}>
-                        {data.impact_probability ? `${(data.impact_probability * 100).toFixed(6)}%`  : '0%'}
-                      </span>
+                  )}
+                  <div className="flex flex-col sm:flex-row sm:justify-between gap-1 sm:gap-4">
+                    <span className="text-white/60 text-sm sm:text-base">Probabilidad de impacto:</span>
+                    <span className={`text-sm sm:text-base ${
+                      data.impact_probability && data.impact_probability > 0.001 
+                        ? 'text-red-400' 
+                        : 'text-green-400'
+                    }`} style={{ fontFamily: 'Orbitron, monospace' }}>
+                      {data.impact_probability ? `${(data.impact_probability * 100).toFixed(6)}%` : '0%'}
+                    </span>
                   </div>
                 </div>
               </div>
