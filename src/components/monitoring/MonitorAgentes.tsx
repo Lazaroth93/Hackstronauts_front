@@ -536,11 +536,23 @@ export function MonitorAgentes() {
           boxSizing: 'border-box'
         }}
       >
-        {/* Single row - all seven monitors */}
-        <div className="w-full flex flex-col items-center">
-          <div className="w-full flex justify-center gap-2 sm:gap-3 md:gap-4 lg:gap-6 overflow-x-auto px-4">
+        {/* AI AGENTS WORKSTATION Section */}
+        <div className="w-full max-w-7xl mx-auto">
+          {/* Section Header */}
+          <div className="mb-6 text-center">
+            <h2 className="text-2xl font-bold text-white mb-2 font-mono">
+              AI AGENTS WORKSTATION
+            </h2>
+            <p className="text-gray-400 text-sm">
+              Real-time agent processing and analysis
+            </p>
+          </div>
+          
+          {/* Monitors Container */}
+          <div className="w-full flex flex-col items-center">
+            <div className="w-full flex flex-wrap justify-center gap-2 sm:gap-3 md:gap-4 lg:gap-6 px-4">
             {/* DRA. ORBITAL */}
-            <div style={{ width: '13%', minWidth: '10rem', maxWidth: '14rem', height: '16rem' }}>
+            <div style={{ width: '300px', minWidth: '300px', maxWidth: '300px', height: '16rem', marginRight: '1rem' }}>
               <VintageMonitor 
                 agentName="DRA. ORBITAL" 
                 status="online" 
@@ -564,7 +576,7 @@ export function MonitorAgentes() {
             </div>
 
             {/* DRA. MITIGATION */}
-            <div style={{ width: '13%', minWidth: '10rem', maxWidth: '14rem', height: '16rem' }}>
+            <div style={{width: '300px', minWidth: '300px', maxWidth: '300px', height: '16rem', marginRight: '1rem' }}>
               <VintageMonitor 
                 agentName="DRA. MITIGATION" 
                 status="processing" 
@@ -587,7 +599,7 @@ export function MonitorAgentes() {
             </div>
 
             {/* DR. IMPACT */}
-            <div style={{ width: '13%', minWidth: '10rem', maxWidth: '14rem', height: '16rem' }}>
+            <div style={{ width: '300px', minWidth: '250px', maxWidth: '250px', height: '16rem', marginRight: '1rem' }}>
               <VintageMonitor 
                 agentName="DR. IMPACT" 
                 status="online" 
@@ -610,7 +622,7 @@ export function MonitorAgentes() {
             </div>
 
             {/* DRA. ML */}
-            <div style={{ width: '13%', minWidth: '10rem', maxWidth: '14rem', height: '16rem' }}>
+            <div style={{ width: '300px', minWidth: '300px', maxWidth: '300px', height: '16rem', marginRight: '1rem' }}>
               <VintageMonitor 
                 agentName="DRA. ML" 
                 status="processing" 
@@ -633,7 +645,7 @@ export function MonitorAgentes() {
             </div>
 
             {/* DR. DATA */}
-            <div style={{ width: '13%', minWidth: '10rem', maxWidth: '14rem', height: '16rem' }}>
+            <div style={{ width: '300px', minWidth: '300px', maxWidth: '300px', height: '16rem', marginRight: '1rem' }}>
               <VintageMonitor 
                 agentName="DR. DATA" 
                 status="online" 
@@ -656,7 +668,7 @@ export function MonitorAgentes() {
             </div>
 
             {/* DR. VISUALIZATION */}
-            <div style={{ width: '13%', minWidth: '10rem', maxWidth: '14rem', height: '16rem' }}>
+            <div style={{ width: '300px', minWidth: '300px', maxWidth: '300px', height: '16rem', marginRight: '1rem' }}>
               <VintageMonitor 
                 agentName="DR. VISUALIZATION" 
                 status="processing" 
@@ -680,7 +692,7 @@ export function MonitorAgentes() {
             </div>
 
             {/* DR. EXPLAINER */}
-            <div style={{ width: '13%', minWidth: '10rem', maxWidth: '14rem', height: '16rem' }}>
+            <div style={{ width: '300px', minWidth: '300px', maxWidth: '300px', height: '16rem', marginRight: '1rem' }}>
               <VintageMonitor 
                 agentName="DR. EXPLAINER" 
                 status="online" 
@@ -702,19 +714,20 @@ export function MonitorAgentes() {
                 </div>
               </VintageMonitor>
             </div>
+            </div>
+            
+            {/* Single dropdown for all monitors */}
+            <AnimatePresence>
+              {expandedAgent && (
+                <div style={{ width: '90%', maxWidth: '60rem', marginTop: '2rem' }}>
+                  <AgentDropdown 
+                    agent={agentDetails[expandedAgent]} 
+                    onClose={() => setExpandedAgent(null)} 
+                  />
+                </div>
+              )}
+            </AnimatePresence>
           </div>
-          
-          {/* Single dropdown for all monitors */}
-          <AnimatePresence>
-            {expandedAgent && (
-              <div style={{ width: '90%', maxWidth: '60rem', marginTop: '2rem' }}>
-                <AgentDropdown 
-                  agent={agentDetails[expandedAgent]} 
-                  onClose={() => setExpandedAgent(null)} 
-                />
-              </div>
-            )}
-          </AnimatePresence>
         </div>
       </div>
     </div>
