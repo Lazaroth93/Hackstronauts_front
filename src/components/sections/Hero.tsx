@@ -133,18 +133,18 @@ export const Hero: React.FC = () => {
                   NASA-LLM-GRAPH
                 </h3>
                 <p className="text-sm text-white/50 leading-relaxed">
-                  Explorando el cosmos a través de inteligencia artificial y 
-                  grafos de conocimiento interconectados.
+                  Exploring the universe through artificial intelligence and 
+                  knowledge graphs.
                 </p>
               </div>
               
               {/* Links de navegación */}
               <div>
                 <div className="text-xs uppercase tracking-[0.3em] text-white/50 mb-4">
-                  Navegación
+                  Navigation
                 </div>
                 <div className="space-y-2">
-                  {['Datos', 'Modelos', 'Documentación', 'API'].map((link) => (
+                  {['Data', 'Models', 'Documentation', 'API'].map((link) => (
                     <a key={link} href="#" 
                        className="block text-sm text-white/60 hover:text-white/80 
                                   transition-colors duration-300">
@@ -157,10 +157,10 @@ export const Hero: React.FC = () => {
               {/* Contacto */}
               <div>
                 <div className="text-xs uppercase tracking-[0.3em] text-white/50 mb-4">
-                  Contacto
+                  Contact
                 </div>
                 <div className="space-y-2">
-                  {['Investigación', 'Soporte', 'Colaboraciones'].map((link) => (
+                  {['Investigation', 'Support', 'Collaborations'].map((link) => (
                     <a key={link} href="#" 
                        className="block text-sm text-white/60 hover:text-white/80 
                                   transition-colors duration-300">
@@ -173,7 +173,7 @@ export const Hero: React.FC = () => {
             
             <div className="border-t border-white/10 pt-8 text-center">
               <div className="text-xs uppercase tracking-[0.2em] text-white/40">
-                © 2025 NASA-LLM-Graph — Explorando el universo con IA
+                © 2025 NASA-LLM-Graph — Exploring the universe with AI
               </div>
             </div>
           </div>
