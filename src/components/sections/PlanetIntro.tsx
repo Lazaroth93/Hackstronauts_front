@@ -180,7 +180,7 @@ export function PlanetIntro({ onComplete }: PlanetIntroProps) {
             transition={{ duration: 1.8, delay: 0.8 }}
           >
             <img 
-              src="/src/assets/saviors.png" 
+              src="https://uc4db6c18e38e9fa4dc16d5ee075.previews.dropboxusercontent.com/p/thumb/ACzHfEFLx4ZM7dC-qnm-EwSMinagOb7XseMRCJGjfWt4KHWSYx34qeBVKB9SzFLu2XGIdkm5ghGzHebv5RwgfFXjoMstUGYhgNOyXhc_wZK05Jqmvj1NlguvxEcHVAQRGCH1c06FxVbGl4oe_l3hMPp3_l3eaG2-oSOGl4dr94UWFroGddT7CqdoVraIfhhAc0ZmJ6SvPn5pvEOqzk55adViUtEA0_EoecP0qalvyp6BPWk_SP5gIawY5f7BjvYLGaGH2nHjSogwH2KNQSg9FW-kHSazsbgpY36s8lRr-TnziRF4YNRflXlrSA7fHdHJ13X-RZEwZxRUmWmFefxeyyR_y1qHbzcfsLqZh_BDewbc5ttw6GTahpM4FhWGTarcuTE/p.png?is_prewarmed=true" 
               alt="Saviors Logo" 
               className="w-24 h-24 md:w-32 md:h-32 object-contain"
             />

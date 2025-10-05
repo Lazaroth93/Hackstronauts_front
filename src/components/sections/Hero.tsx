@@ -61,19 +61,7 @@ export const Hero: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-3xl md:text-4xl lg:text-6xl font-bold text-white mb-4 lg:mb-6">
-                Near Earth Objects
-              </h2>
-              <p className="text-lg md:text-xl text-white/70 max-w-3xl mx-auto mb-6">
-              Real-time monitoring of Near-Earth asteroids powered by our AI system
-              </p>
-              <div className="flex flex-wrap justify-center gap-4 text-sm">
-                <div className="flex items-center gap-2 bg-green-500/20 px-4 py-2 rounded-full border border-green-500/30">
-                  <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
-                  <span className="text-green-400 font-semibold">Real time data</span>
-                </div>
-                
-              </div>
+
             </motion.div>
             <NEOList />
           </div>

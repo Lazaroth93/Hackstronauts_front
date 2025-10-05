@@ -50,7 +50,7 @@ export const agents: Agent[] = [
       "Manejo de fuentes múltiples",
       "Base de datos espaciales completa"
     ],
-    image: "src/assets/agents_img/dr.data.png",
+    image: "https://uc5097cc3ce2ba0f6a92d46361a0.previews.dropboxusercontent.com/p/thumb/ACzOVWE4d-DSC5PCgP4PJg17zz_EHhdYXSyLOce3SP2I_KY8eEXdZvnUbp22QI_5m06bPa4f0CMoMGLZHLMbGuBNejNVt4Gk-ZFLa9wfSYUPlh84ss4z6FotJa2x4NCfUKfPnN7uNFSLlFMwzB3X1lfrU-pz42lMXzl_INmwulIacq2StmfNKSzUAB7ZmUlg0jn_z5oFfy1Kb6M2_yqo2GywHjz7KgoD6TWd5I37zRIDbr4WS_6QVEMay1zyydtUPu5eeo_gmHkQ3TXwBdo6MMO9tU3wpubZfgGlpuIJNOYyTaHjXqQQkfeJgjvSyvPwP4awBsfPoZUNQKoURRfFbiOP8fQ2fgvYBSyhRW2iW8_P9-ZiNSmvQJJ-LKmYpVk02V0/p.png?is_prewarmed=true",
     color: "#00D4FF",
     abilityType: "data",
     stats: {
@@ -97,7 +97,7 @@ export const agents: Agent[] = [
       "Análisis de incertidumbre orbital",
       "Mecánica celeste avanzada"
     ],
-    image: "src/assets/agents_img/dra.orbital.png",
+    image: "https://ucc77e9aa572da781c65224c4bf8.previews.dropboxusercontent.com/p/thumb/ACz-VXJIDB5c0z-iQX7H6e5yBvxF_IJa144cHPivZ9s5v_9Qc_qJFylfWd_4dlIIAkAJbhNBSdkeg7fHPrsYkFpNJLDXXP6CbmNpamaSqQGE4xTBN-0vtq2dKIcE6iMYbdhKVZVrHvrTnmpfLmT33Xd6KBELEf6c5j-D3wLikl_lYQbgV1LR8Eq06-9jdq_kYKvs1tw1rPWupklnC3z2DQkXGH_zz4xpcaNV-6ah7bSp70PuYm4ncW9hrzYhkdpvkDJBZKG2AIqCme725xqLKxFiliqXhN--enCPcBCY2sqzfP0VD9Jc4s6rCqmVu9tnoUcfIvvpj2OJvJEC5tfGjP78ociV89FoNi29bnKjpBAlokDSSgVPc8PMLPm17TnDiiM/p.png?is_prewarmed=true",
     color: "#FF6B2C",
     abilityType: "trajectory",
     stats: {
@@ -144,7 +144,7 @@ export const agents: Agent[] = [
       "Análisis de efectos sísmicos",
       "Evaluación de tsunamis"
     ],
-    image: "src/assets/agents_img/dra.impact.png",
+    image: "https://uc76a054613c3cc57a18d7db1e98.previews.dropboxusercontent.com/p/thumb/ACy8az566wTJVIQp-6tRg_lUoqQSr6qs_PtD8JBfZJygWN4Y8AhA77cvXNPaYF2lF_qAK2XIH8Iap0Rk0NJgEE2g5216Hlcyki7ut5vrPU9QMm0D1yhud-PnfxpE_sf_JqwD2DLgS1kj2_EVXV9qCh-0azQnkx1g4PegMFvi7WflgUzM_JyWVw2q78IA91QWmrTU2TfIt39ErRbnKMj5qnZJEl9Rta2rz2aAlj9uWER-loQ3D1rUQOed4WlLLnPv5tFqPqeKY2yPqVFqXjUQKj63nfUOs_739UFYa9kHb-sOdvjeaGuVFBaz6xXlWaPWE07pPsIF8t39YMbzRdpv9U5zlCHknCkCmV9CbtW_YwqRj3pZf2lLQgrgKvw7w1rvndI/p.png?is_prewarmed=true",
     color: "#00FF7F",
     abilityType: "impact",
     stats: {
@@ -191,7 +191,7 @@ export const agents: Agent[] = [
       "Optimización de misiones",
       "Recomendaciones científicas"
     ],
-    image: "src/assets/agents_img/dr.2.png",
+    image: "https://uc7d264a3d1225c3e941cec16cde.previews.dropboxusercontent.com/p/thumb/ACwtGGIKBuFON8icn4f7_eNjJdBVVnh3uzKCmYM7OtB5YHJIRT3u6ahBKE6VGw3YvNawiLBSYaTYA-Bcl2tpwcAKwaMMrCqgfaOD4f1T_9YQb6GgrGD0S7WO4WScWi3-d63XKFMpUtp88A_IX_OdFGrtf9MQC8n0tnqI8mn_3yDxrtBBGyrBT5o-WDa8Ls4ywXgY6d1JkwXdWTJdRXLrMA3qVgy3fOIwNfygE6Xfgolh-hJy7bPncnGpz7exVzmaI2Zw9ldKG6UYeJrXG7PrTdJcuNEsHBWpHXAkCGCszBlEVviV-_sCeFT56MZEDko2Bc-VeHiqmFmFkkngSvZASVtXpQjZ1OxtT89iV4sLAQsuoAcpGwojFGemL1JaRX-UjxU/p.png?is_prewarmed=true",
     color: "#B026FF",
     abilityType: "mitigation",
     stats: {
@@ -238,7 +238,7 @@ export const agents: Agent[] = [
       "Visualizaciones de métricas",
       "Representaciones 3D"
     ],
-    image: "src/assets/agents_img/dra.visual.png",
+    image: "https://uc85913efe2514ae071ac6871485.previews.dropboxusercontent.com/p/thumb/ACxzdnWqsSNXB0Y31-jfsFryfibEZMWRMzza-JwvhzCMgSzjxQpDkCiIVaOt3sXEuGszXQaV2nczQZ8ZAPfP8d4P7AzVLSXdFUIb2_TXFl5c3oEsjzru9jQMC0FO135lFPLJbmDE8VhnAVhLNa-hyI-EKeRAn5hjC9t3YrgRv93OsZZrMNhcVprjmGQd0YKr6ypkiAIQs3hUjJQE8FeXeNbrAbYnytXL00wr-_aaJcXTUOs-PC4JLrtRKcsa5gIQMXRATGuy9sbb1vRkbcDfcWUy2bBTs6_q48O7iSB-lYklyVrAYi9YcBxcdCHPKg1WYGrQ286Y5XMwB8TAno7QXAwCo2IMG78LcZMHRM0ra-A6eLTcdwdlezraDJJmSj-qPgM/p.png?is_prewarmed=true",
     color: "#FFD700",
     abilityType: "visualization",
     stats: {
@@ -285,7 +285,7 @@ export const agents: Agent[] = [
       "Cálculos de probabilidades con ML",
       "Evaluación de evolución del riesgo"
     ],
-    image: "src/assets/agents_img/Dra.ml.png",
+    image: "https://uca1d1b44044eb813d4fae84de04.previews.dropboxusercontent.com/p/thumb/ACwJHLlWIIlwAAF5HAsLfaBpQTIcbTj5_4hRTEEJtUeWdchxRY9XXFZnPgLfU8nbUG-fcfCaenxwbVMKU9gn4-nUeFOQpZ5oHD-daqE3-buCz81ax4cpmyvbWeFCEOsaSXhot7cj1Z2_1K8PfjA8GimPlmoHwTUrwsgX6Bu-tlLf20r9hp2rTODtQNU-JGxYAOAP381UDkUhmMLqZamAo0FsQ3xHBebQ4xtQz7LwLBgmDOE1U6uCkFCp9Ho4YhAiBdWvs-nGvN8b9bOKhLIxrqCAzIt-qZ4B6NViUdSN2Ovr6dWA0LMmeXmfMBkVrcpUE7bGoSeFUKX9o72-tByr4pBLTwx1Mga4uJuZG5WcUz0nhyGnG5o16h9JYRlbdewU2gI/p.png?is_prewarmed=true",
     color: "#00FFFF",
     abilityType: "ml",
     stats: {
@@ -332,7 +332,7 @@ export const agents: Agent[] = [
       "Adaptación por audiencia",
       "Comunicación efectiva"
     ],
-    image: "src/assets/agents_img/dr.explainer.png",
+    image: "https://ucdd14e94d9beb9391bcf246f1ec.previews.dropboxusercontent.com/p/thumb/ACzuNb1cgkFw2UBnFi6xqdooy9tbPfhjxDXvNm6jcn5a9Ai2UP4_52ws-BA71-978tQCqsYS4GJmACIxKr-UB9JS1eeMib8oxL_7yWfc5qICQXPfGJ0oX-p0EPZU7YH8G5y9e1fs1UpJr9CBTGKwDyPVjR0MY-uMpyofpJQPzoPzpDKaKsqvVpt9ROytvflvJg7XyObL1u9T2QEhWEOoijIMx5eInT7Aesg1gBn753PV3_24afRznjwxQhC6DAqZMZVouusWiu8pAVyVnirr7cVzn8tEQJ1KRcGpAMe2qrssjUUhkiFRdqB5knAHWF-L3Sas4tW8gKuknm81BBA1Jhp-wgvvfz0gumeHjNZyw-_9DpCI7xOpec1m1_-5FNZlsZw/p.png?is_prewarmed=true",
     color: "#FF00FF",
     abilityType: "explainer",
     stats: {
