@@ -26,7 +26,7 @@ export function PlanetIntro({ onComplete }: PlanetIntroProps) {
             // Cuando el scroll llega al máximo, completamos la intro
             if (newScroll >= 999 && !isComplete) {
               setIsComplete(true);
-              // Transición más directa sin delays
+              // Transición completamente instantánea
               onComplete();
             }
             
@@ -54,6 +54,7 @@ export function PlanetIntro({ onComplete }: PlanetIntroProps) {
   const currentOpacity = scrollY > 800 ? Math.max(0, 1 - ((scrollY - 800) / 200)) : 1;
   const currentTextOpacity = scrollY > 300 ? Math.max(0, 1 - ((scrollY - 300) / 300)) : 1;
 
+  // No renderizar nada cuando esté completo para transición instantánea
   if (isComplete) return null;
 
   return (
@@ -62,7 +63,7 @@ export function PlanetIntro({ onComplete }: PlanetIntroProps) {
       initial={{ opacity: 1 }}
       animate={{ opacity: isComplete ? 0 : 1 }}
       exit={{ opacity: 0 }}
-      transition={{ duration: 0.8, ease: "easeInOut" }}
+      transition={{ duration: 0.4, ease: "easeInOut" }}
     >
       {/* Fondo estrellado */}
       <div className="absolute inset-0">
@@ -176,7 +177,7 @@ export function PlanetIntro({ onComplete }: PlanetIntroProps) {
             className="flex justify-center mb-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.5, delay: 1.5 }}
+            transition={{ duration: 1.8, delay: 0.8 }}
           >
             <img 
               src="/src/assets/saviors.png" 
