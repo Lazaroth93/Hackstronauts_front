@@ -7,11 +7,11 @@ interface NavItem {
 }
 
 const navItems: NavItem[] = [
-  { id: 'hero', label: 'Agentes', icon: '🤖' },
-  { id: 'neo-list', label: 'Asteroides', icon: '☄️' },
-  { id: 'simulation', label: 'Simulación', icon: '🎮' },
+  { id: 'hero', label: 'Agents', icon: '🤖' },
+  { id: 'neo-list', label: 'Asteroids', icon: '☄️' },
+  { id: 'simulation', label: 'Simulation', icon: '🎮' },
   { id: 'monitor', label: 'Monitor IA', icon: '📊' },
-  { id: 'resources', label: 'Recursos', icon: '📚' }
+  { id: 'resources', label: 'Resources', icon: '📚' }
 ];
 
 export function Navbar() {
