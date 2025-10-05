@@ -440,7 +440,7 @@ function ScientistInfoWindow({ scientist }: ScientistInfoWindowProps) {
             {/* Confianza y Ciencias en una fila */}
             <div className="mb-3 flex items-center justify-between">
               <div className="flex items-center gap-2">
-                <span className="text-white text-sm font-bold uppercase">Confianza:</span>
+                <span className="text-white text-sm font-bold uppercase">Confidence:</span>
                 <span 
                   className="px-2 py-1 text-sm font-bold rounded-full"
                   style={{
@@ -476,7 +476,7 @@ function ScientistInfoWindow({ scientist }: ScientistInfoWindowProps) {
 
             {/* Responsabilidades compactas */}
             <div className="mb-3">
-              <h4 className="text-white text-sm font-bold uppercase mb-2">Responsabilidades</h4>
+              <h4 className="text-white text-sm font-bold uppercase mb-2">Responsibilities</h4>
               <div className="space-y-1 max-h-16 overflow-y-auto">
                 {scientist.responsibilities.slice(0, 3).map((responsibility, index) => (
                   <div
@@ -495,7 +495,7 @@ function ScientistInfoWindow({ scientist }: ScientistInfoWindowProps) {
 
             {/* Logros compactos */}
             <div className="mb-3">
-              <h4 className="text-white text-sm font-bold uppercase mb-2">Logros</h4>
+              <h4 className="text-white text-sm font-bold uppercase mb-2">Achievements</h4>
               <div className="space-y-1 max-h-16 overflow-y-auto">
                 {scientist.achievements.slice(0, 2).map((achievement, index) => (
                   <div
