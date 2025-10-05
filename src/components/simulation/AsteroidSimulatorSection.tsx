@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 import { AsteroidData, ImpactData, SimulationState, LiveMetrics, TrajectoryPoint } from '../../types/simulation.types';
 import IntegratedAsteroidSimulator from './IntegratedAsteroidSimulator';
 import { CurvedMonitorWall } from './CurvedMonitorWall';
-import { MonitorAgentes } from '../monitoring/MonitorAgentes';
 import { useSimulation } from '../../contexts/SimulationContext';
 
 export default function AsteroidSimulatorSection() {
@@ -16,21 +15,8 @@ export default function AsteroidSimulatorSection() {
   });
 
   const [liveMetrics, setLiveMetrics] = useState<LiveMetrics>({
-    trackingObjects: 0,
-    averageAltitude: 0,
-    currentAltitude: 0,
-    containmentProtocols: 0,
-    damageReduction: 0,
-    collisionProbability: 0,
-    impactLocation: 'N/A',
-    trainingIterations: 0,
-    modelAccuracy: 0,
-    patternRecognition: 0,
-    dataMiningActive: false,
-    renderedObjects: 0,
-    fps: 0,
-    processedQueries: 0,
-    responseTime: 0,
+    riskLevel: 'low',
+    impactProbability: 0,
     energyMT: 0,
     distanceKm: 0,
     velocityKmh: 0,
@@ -170,19 +156,6 @@ export default function AsteroidSimulatorSection() {
             impactTime={`T-${Math.max(0, Math.floor(liveMetrics.distanceKm / 1000))}:00:00`}
             impactZone="IMPACT ZONE"
           />
-        </div>
-
-        {/* Sistema de Monitores de Agentes AI - Siempre visible */}
-        <div className="mt-8 -mx-6">
-          <div className="mb-6 text-center">
-            <h2 className="text-2xl font-bold text-white mb-2 font-mono">
-              AI AGENTS WORKSTATION
-            </h2>
-            <p className="text-gray-400 text-sm">
-              Real-time agent processing and analysis
-            </p>
-          </div>
-          <MonitorAgentes />
         </div>
 
       </div>
