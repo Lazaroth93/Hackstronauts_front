@@ -8,7 +8,6 @@ interface PlanetIntroProps {
 export function PlanetIntro({ onComplete }: PlanetIntroProps) {
   const [scrollY, setScrollY] = useState(0);
   const [isComplete, setIsComplete] = useState(false);
-  const [shouldRender, setShouldRender] = useState(true);
 
   // Scroll personalizado que no mueve la página
   useEffect(() => {
@@ -27,11 +26,8 @@ export function PlanetIntro({ onComplete }: PlanetIntroProps) {
             // Cuando el scroll llega al máximo, completamos la intro
             if (newScroll >= 999 && !isComplete) {
               setIsComplete(true);
-              // Fade out primero, luego desmontar
-              setTimeout(() => {
-                setShouldRender(false);
-                setTimeout(() => onComplete(), 300); // Esperar a que termine la animación
-              }, 100);
+              // Transición más directa sin delays
+              onComplete();
             }
             
             return newScroll;
@@ -58,13 +54,15 @@ export function PlanetIntro({ onComplete }: PlanetIntroProps) {
   const currentOpacity = scrollY > 800 ? Math.max(0, 1 - ((scrollY - 800) / 200)) : 1;
   const currentTextOpacity = scrollY > 300 ? Math.max(0, 1 - ((scrollY - 300) / 300)) : 1;
 
-  if (!shouldRender) return null;
+  if (isComplete) return null;
 
   return (
     <motion.div 
-      className="fixed inset-0 z-50 bg-slate-900 flex items-center justify-center overflow-hidden"
-      animate={{ opacity: shouldRender ? 1 : 0 }}
-      transition={{ duration: 0.3 }}
+      className="fixed inset-0 z-50 bg-black flex items-center justify-center overflow-hidden"
+      initial={{ opacity: 1 }}
+      animate={{ opacity: isComplete ? 0 : 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.8, ease: "easeInOut" }}
     >
       {/* Fondo estrellado */}
       <div className="absolute inset-0">
@@ -95,7 +93,8 @@ export function PlanetIntro({ onComplete }: PlanetIntroProps) {
         className="relative"
         style={{
           transform: `scale(${currentScale})`,
-          opacity: currentOpacity
+          opacity: isComplete ? 0 : currentOpacity,
+          transition: 'opacity 0.8s ease-out'
         }}
       >
         {/* Galaxia principal - Ahora ocupa toda la pantalla */}
@@ -166,25 +165,31 @@ export function PlanetIntro({ onComplete }: PlanetIntroProps) {
       <div
         className="absolute inset-0 flex items-center justify-center"
         style={{
-          opacity: currentTextOpacity,
-          transform: `scale(${1 - (scrollY / 1000) * 0.2})`
+          opacity: isComplete ? 0 : currentTextOpacity,
+          transform: `scale(${1 - (scrollY / 1000) * 0.2})`,
+          transition: 'opacity 0.8s ease-out'
         }}
       >
         <div className="text-center">
-          <motion.h1 
-            className="text-4xl md:text-6xl lg:text-7xl mb-4 bg-gradient-to-r from-white via-blue-200 to-purple-200 bg-clip-text text-transparent tracking-wider"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 2, delay: 1 }}
+          {/* Logo de Saviors */}
+          <motion.div
+            className="flex justify-center mb-4"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.5, delay: 1.5 }}
           >
-            NASA-LLM-GRAPH
-          </motion.h1>
+            <img 
+              src="/src/assets/saviors.png" 
+              alt="Saviors Logo" 
+              className="w-24 h-24 md:w-32 md:h-32 object-contain"
+            />
+          </motion.div>
           
           <motion.p 
             className="text-lg md:text-xl text-gray-300 opacity-80 tracking-wide"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.5, delay: 2.5 }}
+            transition={{ duration: 1.5, delay: 2 }}
           >
             Explorando el cosmos con inteligencia artificial
           </motion.p>
@@ -194,7 +199,10 @@ export function PlanetIntro({ onComplete }: PlanetIntroProps) {
       {/* Indicador de scroll */}
       <div 
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-center"
-        style={{ opacity: currentTextOpacity }}
+        style={{ 
+          opacity: isComplete ? 0 : currentTextOpacity,
+          transition: 'opacity 0.5s ease-out'
+        }}
       >
         <motion.div
           className="text-blue-300 text-sm mb-2"
