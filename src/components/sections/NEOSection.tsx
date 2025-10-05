@@ -29,18 +29,7 @@ export default function NEOSection({ isOpen, onClose }: NEOSectionProps) {
           onClick={(e) => e.stopPropagation()}
         >
           {/* Header */}
-          <div className="p-6 border-b border-gray-700">
-            <div className="flex justify-between items-center mb-4">
-              <h1 className="text-3xl font-bold text-white">Near Earth Objects Monitor</h1>
-              <button
-                onClick={onClose}
-                className="text-gray-400 hover:text-white text-2xl"
-              >
-                ×
-              </button>
-            </div>
-            <p className="text-gray-300">Asteroides cercanos a la Tierra monitoreados en tiempo real por nuestro sistema de IA</p>
-          </div>
+
 
           <div className="flex h-full">
             {/* Sidebar - Filtros y Lista */}

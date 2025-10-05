@@ -47,7 +47,7 @@ const Gauge: React.FC<GaugeProps> = ({ label, value, unit, max, color }) => {
           </div>
         </div>
       </div>
-      <div className="text-white text-xs font-mono">{label}</div>
+      <div className="text-white text-xs" style={{ fontFamily: 'Orbitron, monospace' }}>{label}</div>
     </div>
   );
 };
@@ -55,10 +55,10 @@ const Gauge: React.FC<GaugeProps> = ({ label, value, unit, max, color }) => {
 export const ThreatAssessmentPanel: React.FC = () => {
   const metrics = useLiveMetrics();
   
-  // Calcular métricas de amenaza basadas en el asteroide
-  const energy = metrics.trackingObjects * 0.5; // MT (Megatons)
-  const distance = metrics.averageAltitude / 1000; // K KM
-  const velocity = metrics.trainingIterations / 100; // K KM/H
+  // Usar métricas reales calculadas por useLiveMetrics
+  const energy = metrics.energyMT; // MT (Megatons)
+  const distance = metrics.distanceKm / 1000; // K KM
+  const velocity = metrics.velocityKmh / 1000; // K KM/H
   
   return (
     <div className="w-full">
@@ -89,7 +89,7 @@ export const ThreatAssessmentPanel: React.FC = () => {
       </div>
       
       <div className="mt-4 text-center">
-        <div className="text-green-400 text-sm font-mono">
+        <div className="text-green-400 text-sm" style={{ fontFamily: 'Orbitron, monospace' }}>
           STATUS: {energy > 50 ? 'HIGH THREAT' : energy > 20 ? 'MEDIUM THREAT' : 'LOW THREAT'}
         </div>
       </div>

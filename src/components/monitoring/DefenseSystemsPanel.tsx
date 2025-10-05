@@ -12,8 +12,8 @@ const SystemBar: React.FC<SystemBarProps> = ({ label, percentage, isActive, colo
   return (
     <div className="mb-3">
       <div className="flex justify-between items-center mb-1">
-        <span className="text-white text-sm font-mono">{label}</span>
-        <span className="text-gray-400 text-xs font-mono">{percentage}%</span>
+        <span className="text-white text-sm" style={{ fontFamily: 'Orbitron, monospace' }}>{label}</span>
+        <span className="text-gray-400 text-xs" style={{ fontFamily: 'Orbitron, monospace' }}>{percentage}%</span>
       </div>
       <div className="w-full bg-gray-700 rounded-full h-2">
         <div
@@ -74,7 +74,7 @@ export const DefenseSystemsPanel: React.FC = () => {
       </div>
       
       <div className="mt-6 text-center">
-        <div className="text-sm font-mono">
+        <div className="text-sm" style={{ fontFamily: 'Orbitron, monospace' }}>
           <div className="text-green-400 mb-1">
             ACTIVE SYSTEMS: {[laserArray, missilePods, shieldGen, reactorCore, communication]
               .filter(p => p > 80).length}/5
