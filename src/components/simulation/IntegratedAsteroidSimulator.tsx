@@ -215,9 +215,9 @@ export default function IntegratedAsteroidSimulator({
       {/* Header */}
       <div className="bg-gray-800 p-4 shadow-lg">
         <div className="flex items-center justify-between">
-          <h1 className="text-2xl font-bold text-white">
-            Simulador de Choque de Meteoritos
-          </h1>
+          <h2 className="text-2xl font-bold text-white">
+          Meteor Impact Simulator
+          </h2>
           <div className="flex gap-2">
             {showMap && (
               <button 

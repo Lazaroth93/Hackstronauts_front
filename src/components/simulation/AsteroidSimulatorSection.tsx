@@ -120,8 +120,7 @@ export default function AsteroidSimulatorSection() {
             </button>
           ) : (
             <div className="text-center">
-              <h2 className="text-2xl font-bold text-white mb-4">🌍 Simulador de Impacto de Asteroides</h2>
-              <p className="text-gray-400 mb-6">Selecciona un asteroide de la lista superior para comenzar la simulación</p>
+              
             </div>
           )}
         </div>
@@ -130,7 +129,7 @@ export default function AsteroidSimulatorSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Panel Izquierdo - Simulador 3D */}
           <div className="bg-gray-900/50 backdrop-blur-lg rounded-2xl border border-cyan-400/30 p-6 col-span-2">
-            <h2 className="text-2xl font-bold text-white mb-4">🌍 Simulador 3D</h2>
+           
             <div className="w-full h-[80vh]">
               <IntegratedAsteroidSimulator 
                 onImpact={(impactData) => {

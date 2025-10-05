@@ -285,23 +285,23 @@ export default function Earth3DGlobe({ onLocationSelect }: Earth3DGlobeProps) {
       {/* Overlay de instrucciones */}
       <div className="absolute top-4 left-4 z-10">
         <div className="bg-black/80 text-white p-4 rounded-lg backdrop-blur-sm max-w-sm">
-          <h3 className="font-bold text-lg mb-3">Instrucciones</h3>
+          <h3 className="font-bold text-lg mb-3">Instructions</h3>
           <div className="space-y-2 text-sm">
             <p className="flex items-center gap-2">
               <span className="w-4 h-4 bg-white rounded-sm"></span>
-              Haz clic en cualquier parte del planeta para seleccionar una ubicación
+              Click anywhere on the planet to select a location
             </p>
             <p className="flex items-center gap-2">
               <span className="w-4 h-4 bg-gray-400 rounded-sm"></span>
-              Usa el mouse para rotar y hacer zoom
+              Use the mouse to rotate and zoom
             </p>
             <p className="flex items-center gap-2 text-yellow-400">
               <span className="w-4 h-4 bg-yellow-400 rounded-sm"></span>
-              El planeta se ilumina cuando pasas el mouse sobre él
+              The planet will glow when you hover over it
             </p>
             <p className="flex items-center gap-2 text-green-400">
               <span className="w-4 h-4 bg-green-400 rounded-sm"></span>
-              El mapa se abrirá automáticamente al seleccionar
+              The map will automatically open when you select
             </p>
           </div>
         </div>

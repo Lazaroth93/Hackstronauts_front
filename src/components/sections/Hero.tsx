@@ -25,11 +25,11 @@ export const Hero: React.FC = () => {
             >
               <h1 className="text-xl md:text-xl lg:text-5xl font-black  lg:mb-6 tracking-wider" style={{ fontFamily: 'Orbitron, monospace' , marginTop: '20px' }}>
                 <span className="text-emerald-400 drop-shadow-[0_0_30px_rgba(52,211,153,0.8)]" style={{ textShadow: '0 0 20px rgba(52,211,153,0.8), 0 0 40px rgba(52,211,153,0.6)' }}>
-                  OUR SCIENTISTS
+                  Our Scientists
                 </span>
                 <br />
                 <span className="text-orange-400 drop-shadow-[0_0_30px_rgba(239,68,68,0.8)]" style={{ textShadow: '0 0 20px rgba(249,115,22,0.8), 0 0 40px rgba(249,115,22,0.6)' }}>
-                  AGENTS
+                  Agents
                 </span>
               </h1>
               <div className="flex justify-center items-center gap-6 ">
@@ -60,19 +60,8 @@ export const Hero: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-3xl md:text-4xl lg:text-6xl font-bold text-white mb-4 lg:mb-6">
-                Near Earth Objects
-              </h2>
-              <p className="text-lg md:text-xl text-white/70 max-w-3xl mx-auto mb-6">
-              Real-time monitoring of Near-Earth asteroids powered by our AI system
-              </p>
-              <div className="flex flex-wrap justify-center gap-4 text-sm">
-                <div className="flex items-center gap-2 bg-green-500/20 px-4 py-2 rounded-full border border-green-500/30">
-                  <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
-                  <span className="text-green-400 font-semibold">Real time data</span>
-                </div>
-                
-              </div>
+             
+           
             </motion.div>
             <NEOList />
           </div>
@@ -91,10 +80,10 @@ export const Hero: React.FC = () => {
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-3xl md:text-4xl lg:text-6xl font-bold text-white mb-4 lg:mb-6">
-                Simulación 3D de Impacto
+              3D Impact Simulation
               </h2>
               <p className="text-lg md:text-xl text-white/70 max-w-3xl mx-auto">
-                Visualiza el impacto de asteroides en tiempo real con tecnología 3D avanzada
+              Visualize asteroid impacts in real time with advanced 3D technology
               </p>
             </motion.div>
             <AsteroidSimulatorSection />

@@ -6,6 +6,7 @@ import { NEODetailModal } from '../../ui/modals/NEODetailModal';
 import { Carousel } from '../carousel/Carousel';
 import { useSimulation } from '../../../contexts/SimulationContext';
 import type { NEO } from '../../../types/api.types';
+import { Earth } from 'lucide-react';
 
 export const NEOList: React.FC = () => {
   const [selectedNEO, setSelectedNEO] = useState<NEO | null>(null);
@@ -116,10 +117,10 @@ export const NEOList: React.FC = () => {
       {/* Section header */}
       <div className="text-center mb-12 px-6">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-white mb-4">
+          <h2 className="text-4xl font-bold text-white mb-4" style={{ fontSize: '44px' }}>
             Near Earth Objects
           </h2>
-          <p className="text-white/60 max-w-2xl mx-auto">
+          <p className="text-white/60 max-w-2xl mx-auto" style={{ fontSize: '24px' }}>
             Near-Earth asteroids monitored in real-time by our AI system
           </p>
           <div className="mt-4 text-sm text-white/40">
@@ -146,21 +147,6 @@ export const NEOList: React.FC = () => {
         showNavigation={true}
       />
 
-        {/* Additional information */}
-      <div className="mt-12 text-center px-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="inline-flex items-center space-x-6 text-sm text-white/40">
-            <div className="flex items-center space-x-2">
-              <div className="w-3 h-3 rounded-full bg-green-500"></div>
-              <span>Safe</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <div className="w-3 h-3 rounded-full bg-red-500"></div>
-              <span>Hazardous</span>
-            </div>
-          </div>
-        </div>
-      </div>
 
       {/* Details modal */}
       {selectedNEO && (
