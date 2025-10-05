@@ -113,27 +113,23 @@ export const NEOList: React.FC = () => {
 
   return (
     <div className="py-16">
-      {/* Header de la sección */}
+      {/* Section header */}
       <div className="text-center mb-12 px-6">
-      <div className="max-w-6xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-4">
             Near Earth Objects
           </h2>
           <p className="text-white/60 max-w-2xl mx-auto">
-            Asteroides cercanos a la Tierra monitoreados en tiempo real por nuestro sistema de IA
+            Near-Earth asteroids monitored in real-time by our AI system
           </p>
           <div className="mt-4 text-sm text-white/40">
-            Mostrando {data?.neos?.length || 0} asteroides
+            Showing {data?.neos?.length || 0} asteroids
           </div>
-          {data && (
-            <div className="mt-2 text-xs text-green-400/80 bg-green-400/10 px-3 py-1 rounded-full inline-block">
-              Real time data
-            </div>
-          )}
-          </div>
+          
         </div>
+      </div>
 
-      {/* Carrusel de asteroides - Sin restricción de ancho */}
+      {/* Asteroid carousel - No width restriction */}
       <Carousel<NEO>
         items={data?.neos ?? ([] as NEO[])}
         renderItem={(neo, index, _isActive) => (
@@ -150,23 +146,23 @@ export const NEOList: React.FC = () => {
         showNavigation={true}
       />
 
-        {/* Información adicional */}
+        {/* Additional information */}
       <div className="mt-12 text-center px-6">
         <div className="max-w-6xl mx-auto">
           <div className="inline-flex items-center space-x-6 text-sm text-white/40">
             <div className="flex items-center space-x-2">
               <div className="w-3 h-3 rounded-full bg-green-500"></div>
-              <span>Seguro</span>
+              <span>Safe</span>
             </div>
             <div className="flex items-center space-x-2">
               <div className="w-3 h-3 rounded-full bg-red-500"></div>
-              <span>Peligroso</span>
+              <span>Hazardous</span>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Modal de detalles */}
+      {/* Details modal */}
       {selectedNEO && (
         <NEODetailModal
           neo={selectedNEO}

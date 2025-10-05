@@ -220,10 +220,7 @@ export default function AgentSelector() {
 
 
       {/* Sección NEOs */}
-      <NEOSection 
-        isOpen={showNEOSection} 
-        onClose={() => setShowNEOSection(false)} 
-      />
+    
 
     </section>
   );
